@@ -11,10 +11,10 @@ import javax.sql.DataSource;
 public class Datasource {
 
     @Bean
-    public DataSource testDataSource() {
+    public DataSource provideMysqlDS() {
         BasicDataSource bds = new BasicDataSource();
         bds.setDriverClassName("com.mysql.jdbc.Driver");
-        bds.setUrl("jdbc:mysql://localhost:3306");
+        bds.setUrl("jdbc:mysql://localhost:3306/springboot_mysql_example");
         bds.setUsername("root");
         bds.setPassword("root");
         bds.setTestWhileIdle(true);
