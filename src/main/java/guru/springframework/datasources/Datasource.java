@@ -17,7 +17,7 @@ public class Datasource {
         String formattedHostAndPort = mysqlHost + ":" + mysqlPort;
         BasicDataSource bds = new BasicDataSource();
         bds.setDriverClassName("com.mysql.jdbc.Driver");
-        bds.setUrl("jdbc:mysql://" + formattedHostAndPort + "/springboot_mysql_example");
+        bds.setUrl("jdbc:mysql://" + formattedHostAndPort + "/sampledb");
         bds.setUsername("root");
         bds.setPassword("root");
         bds.setTestWhileIdle(true);
