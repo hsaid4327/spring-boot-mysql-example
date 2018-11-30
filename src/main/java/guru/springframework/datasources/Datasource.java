@@ -12,9 +12,12 @@ public class Datasource {
 
     @Bean
     public DataSource provideMysqlDS() {
+        String mysqlHost = System.getenv("MYSQL_SERVICE_HOST");
+        String mysqlPort = System.getenv("MYSQL_SERVICE_PORT");
+        String formattedHostAndPort = mysqlHost + ":" + mysqlPort;
         BasicDataSource bds = new BasicDataSource();
         bds.setDriverClassName("com.mysql.jdbc.Driver");
-        bds.setUrl("jdbc:mysql://localhost:3306/springboot_mysql_example");
+        bds.setUrl("jdbc:mysql://" + formattedHostAndPort + "/springboot_mysql_example");
         bds.setUsername("root");
         bds.setPassword("root");
         bds.setTestWhileIdle(true);
