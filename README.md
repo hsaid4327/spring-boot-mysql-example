@@ -1,3 +1,3 @@
 # Spring Boot MySQL Example
 
-You can learn more about my courses [here](http://courses.springframework.guru/courses/) on my site.
+This is a fork of springframeworkguru/spring-boot-mysql-example. Please see [the original repository](https://github.com/springframeworkguru/spring-boot-mysql-example) for full documentation. This fork serves as an example of running spring boot on OpenShift.
