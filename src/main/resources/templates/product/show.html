@@ -5,25 +5,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
-          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
           rel="stylesheet" media="screen"/>
 
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-
-    <link href="../../static/css/spring-core.css"
-          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">
-
+  <div class="jumbotron" style="height: 100%; text-align: center; margin-bottom: 0;">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <h2>Show Product</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-12">
             <form class="form-horizontal">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Product Id:</label>
@@ -52,6 +47,12 @@
             </form>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a class="btn btn-primary" href="/">Back</a>
+        </div>
+    </div>
+</div>
 </div>
 
 </body>
