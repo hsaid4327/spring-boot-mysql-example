@@ -16,11 +16,13 @@ public class Datasource {
         String mysqlPort = System.getenv("MYSQL_SERVICE_PORT");
         String formattedHostAndPort = mysqlHost + ":" + mysqlPort;
         String mysqlDb = System.getenv("MYSQL_DB");
+        String mysqlUser = System.getenv("MYSQL_USER");
+        String mysqlPassword = System.getenv("MYSQL_PASSWORD");
         BasicDataSource bds = new BasicDataSource();
         bds.setDriverClassName("com.mysql.jdbc.Driver");
         bds.setUrl("jdbc:mysql://" + formattedHostAndPort + "/" + mysqlDb);
-        bds.setUsername("root");
-        bds.setPassword("root");
+        bds.setUsername(mysqlUser);
+        bds.setPassword(mysqlPassword);
         bds.setTestWhileIdle(true);
         bds.setValidationQuery("SELECT 1");
         return bds;
